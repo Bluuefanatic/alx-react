@@ -4,9 +4,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    header: './header/header.js',
-    body: './body/body.js',
-    footer: './footer/footer.js',
+  header: './modules/header/header.js',
+  body: './modules/body/body.js',
+  footer: './modules/footer/footer.js'
   },
   output: {
     filename: '[name].bundle.js',
@@ -20,7 +20,8 @@ module.exports = {
     },
     port: 8564,
     open: true,
-    hot: true, // Enable Hot Module Replacement
+    hot: true,
+    watchFiles: ['public/*']  
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -41,9 +42,15 @@ module.exports = {
       },
     ],
   },
-  optimization: {
+optimization: {
     splitChunks: {
       chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
     },
   },
-};

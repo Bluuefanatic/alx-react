@@ -1,0 +1,12 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#clickButton {
+  margin-top: 20px;
+}
+
+#counter {
+  font-weight: bold;
+  margin-left: 10px;
+}
