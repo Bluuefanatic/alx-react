@@ -1,0 +1,12 @@
+.App-header {
+  display: flex;
+  align-items: center;
+  background-color: #282c34;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+.App-header img {
+  height: 40px;
+  margin-right: 20px;
+}
