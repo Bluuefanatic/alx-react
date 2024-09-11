@@ -1,0 +1,29 @@
+.Notifications {
+  border: 1px solid #e7e7e7;
+  padding: 10px;
+  width: 400px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+  z-index: 100;
+}
+
+.Notifications button {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.Notifications ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Notifications li {
+  margin-bottom: 5px;
+}
